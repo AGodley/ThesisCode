@@ -169,7 +169,7 @@ def u_method(i, num, traj_data, traj_mus, QFI, tol, approx_tol):
 
 # Finds directory for the data
 adaptiveMeasurementSimulation = (Path.cwd()).parents[1]
-Model2 = adaptiveMeasurementSimulation.joinpath('data').joinpath('displaced_null_markov')
+Model2 = adaptiveMeasurementSimulation.joinpath('data').joinpath('displacedNullMeasurements')
 
 #########
 # Start #
@@ -327,9 +327,9 @@ if False:
 ##################
 if True:
     # Reads the data
-    data = pd.read_csv(Model2.joinpath('varying').joinpath('trajectories_varying.csv'))
+    data = pd.read_csv(Model2.joinpath('varying').joinpath('trajectories_varying_2024_03_20.csv'))
     # Reads the expected counts
-    expected = pd.read_csv(Model2.joinpath('varying').joinpath('expected_mus_varying.csv'))
+    expected = pd.read_csv(Model2.joinpath('varying').joinpath('expected_mus_varying_2024_03_20.csv'))
 
     # Madalin's estimator
     QFI = np.real_if_close(qfi_calc(0.2, 0.8, np.pi / 4))
@@ -585,7 +585,7 @@ for p in alpha:
 #######################
 # Repeated trajectory #
 #######################
-if False:
+if True:
     # Reads the data
     data = pd.read_csv(Model2.joinpath('varying').joinpath('repeated_traj_2024_04_16.csv'))
     # Reads the expected counts

@@ -127,9 +127,9 @@ def trajectory(id, setup):
     # print(x)
 
     # Analyses the patterns in x
-    # patterns, wsp = pattern_check(x, 6)
+    patterns, wsp = pattern_check(x, 6)
     # Alternative Stochastic method
-    patterns, wsp = stochastic_patterns(x, 1/20, 10)
+    # patterns, wsp = stochastic_patterns(x, 1/20, 10)
 
     # Calculates the expected counts for the pattern
     expected_counts, mpn_pat = expected(rho_t0, K, abs(theta - absorber), n_final)
@@ -157,7 +157,7 @@ def trajectory(id, setup):
     save = True
     # Finds directory for the project
     adaptiveMeasurementSimulation = (Path.cwd()).parents[1]
-    displaced_null_markov = adaptiveMeasurementSimulation.joinpath('data').joinpath('displaced_null_markov')
+    displaced_null_markov = adaptiveMeasurementSimulation.joinpath('data').joinpath('displacedNullMeasurements')
     # Toggles saving
     if save:
         # Opens the file in append mode

@@ -172,7 +172,7 @@ def trajectory(id, setup):
     save = True
     # Finds directory for the project
     adaptiveMeasurementSimulation = (Path.cwd()).parents[1]
-    displaced_null_markov = adaptiveMeasurementSimulation.joinpath('data').joinpath('displaced_null_markov')
+    displaced_null_markov = adaptiveMeasurementSimulation.joinpath('data').joinpath('displacedNullMeasurements')
     # Toggles saving
     if save:
         # Opens the file in append mode
